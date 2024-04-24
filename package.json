@@ -1,8 +1,9 @@
 {
-  "name": "node-starter-kit",
+  "name": "starter-kit",
   "version": "1.0.0",
-  "description": "",
+  "description": "This repo supports trainees building projects in Node and Express for the first time.",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -10,6 +11,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.19.2"
   }
 }
