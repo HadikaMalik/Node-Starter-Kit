@@ -24,6 +24,15 @@ app.post("/movies", (req,res) => {
     res.send(newMovie)
 })
 
+app.put("movies/:id", (req,res) => {
+    console.log(req.body);
+    console.log(req.params);
+    const replaceMovie = {...req.body, ...req.params};
+    const movieIndex = movies.findIndex((movie) => movie.id === Number(req.params.id));
+    movies.splice(movieIndex, 1, replaceMovie);
+    res.send({success: true});
+})
+
 app.listen(3000, () => {
     console.log("Your app is listening on port 3000!");
 })
